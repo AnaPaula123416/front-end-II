@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Meu titulo</h1>
-    <p id="pInicial" class="paragrafo">Meu parágrafo</p>
+    <h1>Lista de Compras</h1>
+    <div>
+        <ul>
+            <h2>Produtos a comprar:</h2>
+            <li>Arroz</li>
+            <li>Pão</li>
+            <li>Macarrão</li>
+            <li>Carne</li>
+            <li>Batata</li>
+            <li>Uva</li>
+            <li>Paçoca</li>
+            <li>Chocolate</li>
+            <li>Queijo</li>
+            <li>Leite Ninho</li>
+        </ul>
+        <ul>
+            <h2>Produtos já adicionados no carrinho:</h2>
+            <li>Arroz</li>
+            <li>Pão</li>
+            <li>Macarrão</li>
+            <li>Carne</li>
+            <li>Batata</li>
+        </ul>
+    </div>
     <button onclick="alert('Clicou!')">Clique aqui!</button>
-    <script src="./script.js"></script>
-</body>
 
+    <script>
+        const paragrafo = window.document.getElementById('pInicial');
+        console.log(paragrafo.textContent);
+        paragrafo.textContent = 'Novo conteudo';
+        console.log(paragrafo.textContent);
+    </script>
+</body>
 </html>
