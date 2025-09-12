@@ -1,0 +1,13 @@
+.h1 {
+  color: rgb(45, 89, 211);
+}
+
+.p {
+  color: rgb(0, 0, 0) ;
+  background-color: bisque;
+}
+
+.div {
+  align-items: center;
+  text-align: center;
+}
