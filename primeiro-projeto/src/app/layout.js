@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
-        <header>Pauleta</header>
+        <Header>Pauleta</Header>
         {children}
       </body>
     </html>
