@@ -1,7 +1,7 @@
 .header {
     height: 100px;
-    background-color: blueviolet;
-    padding: 20px;
+    background-color: rgb(50, 53, 53);
+    padding: 10px;
 }
 
 .ulMenu {
@@ -11,21 +11,21 @@
     font-size: 22px;
 }
 
-.liMenu, .liSubMenu {
-    list-style-type: none;
-}
-
 .ulSubMenu {
     font-size: 18px;
     padding-left: 10px;
-    max-width: 0;
+    max-height: 0;
     overflow: hidden;
 }
 
-.liMenu>ul :hover{
+.liMenu:hover .ulSubMenu {
     max-height: 100vh;
 }
 
-.Link :hover {
+.Link:hover {
     color: rgb(0, 0, 0);
+}
+
+.liMenu, .liSubMenu {
+    list-style-type: none;
 }

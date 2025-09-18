@@ -1,9 +1,23 @@
+'use client'
+import { useState } from "react";
 import styles from "./header.module.css"
 import Link from "next/link";
 
 export default function Header() {
+    const [show, setShow] = useState(false);
     return (
         <>
+        <header>
+            <button onClick={() => {setShow(!show)}}>X</button>
+            {show &&
+            
+            <div style={{height: '280px'}}>
+                <p>MOBILE</p>
+            </div>
+            }
+            
+        </header>
+
 
             <header className={styles.header}>
                 <nav>
@@ -15,6 +29,25 @@ export default function Header() {
                                 <li className={styles.liSubMenu}><Link className={styles.Link} href='/produtos'>Pesquisar</Link></li>
                             </ul>
                         </li>
+                        <li className={styles.liMenu}><Link className={styles.Link} href='/produtos'>Produtos</Link>
+                            <ul className={styles.ulSubMenu}>
+                                <li className={styles.liSubMenu}><Link className={styles.Link} href='/produtos'>Cadastrar</Link></li>
+                                <li className={styles.liSubMenu}><Link className={styles.Link} href='/produtos'>Pesquisar</Link></li>
+                            </ul>
+                        </li>
+                        <li className={styles.liMenu}><Link className={styles.Link} href='/produtos'>Produtos</Link>
+                            <ul className={styles.ulSubMenu}>
+                                <li className={styles.liSubMenu}><Link className={styles.Link} href='/produtos'>Cadastrar</Link></li>
+                                <li className={styles.liSubMenu}><Link className={styles.Link} href='/produtos'>Pesquisar</Link></li>
+                            </ul>
+                        </li>
+                        <li className={styles.liMenu}><Link className={styles.Link} href='/produtos'>Produtos</Link>
+                            <ul className={styles.ulSubMenu}>
+                                <li className={styles.liSubMenu}><Link className={styles.Link} href='/produtos'>Cadastrar</Link></li>
+                                <li className={styles.liSubMenu}><Link className={styles.Link} href='/produtos'>Pesquisar</Link></li>
+                            </ul>
+                        </li>
+                        
                     </ul>
                 </nav>
             </header>
