@@ -2,17 +2,19 @@
 import { useState } from "react";
 import styles from "./header.module.css"
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
     const [show, setShow] = useState(false);
     return (
         <>
-        <header>
+        <header className={styles.headerMobile}>
             <button onClick={() => {setShow(!show)}}>X</button>
             {show &&
             
-            <div style={{height: '280px'}}>
-                <p>MOBILE</p>
+            <div style={{height: '280px', border: '2px solid black'}}>
+                {/* {<p>MOBILE</p>} */}
+                <Image src={'/images/carrots.png'} height={50} width={50} alt='Imagem'></Image>
             </div>
             }
             

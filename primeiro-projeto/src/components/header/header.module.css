@@ -11,21 +11,37 @@
     font-size: 22px;
 }
 
+
 .ulSubMenu {
     font-size: 18px;
     padding-left: 10px;
     max-height: 0;
     overflow: hidden;
+    transition: max-height 1s ease-in;
 }
 
 .liMenu:hover .ulSubMenu {
     max-height: 100vh;
 }
 
-.Link:hover {
+
+.liMenu,
+.liSubMenu {
+    list-style-type: none;
+}
+
+.link:hover {
     color: rgb(0, 0, 0);
 }
 
-.liMenu, .liSubMenu {
-    list-style-type: none;
+@media (max-width:600px) {
+    .header {
+        display: none;
+    }
+}
+
+@media (max-width:601px) {
+    .headerMobile {
+        display: none;
+    }
 }

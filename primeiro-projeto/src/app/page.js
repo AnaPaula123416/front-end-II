@@ -3,16 +3,18 @@ import { useState } from "react";
 import styles from "./page.module.css"
 
 export default function Home() {
+
   // let cont = 0;
   const [cont, setCont] = useState(0);
+  const [estilo, setEstilo] = useState('colorido')
 
   const subtrair = () => {
-    setCont(cont-1);
+    setCont(cont - 1);
     console.log(cont);
   }
 
   const adicionar = () => {
-    setCont(cont+1);
+    setCont(cont + 1);
     console.log(cont);
   }
 
@@ -26,7 +28,12 @@ export default function Home() {
       <button onClick={() => { adicionar() }}>Adicionar</button>
       <button onClick={() => { subtrair() }}>Subtrair</button>
       <p>Contagem {cont}</p>
+
+      <button onClick={() => {setEstilo('colorido')}}>Estilo turquesa</button>
+      <button onClick={() => {setEstilo('amarelo')}}>Estilo amarelo</button>
+      <div className={`${styles.box} ${estilo === 'colorido'? styles.colorido : styles.amarelo}`}></div>
     </div>
-    
+
+  
   );
 }
